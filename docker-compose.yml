@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  ticketing_web_client:
+    build: ./client-next
+    image: rama89/ticketing_web_client
+
+  ticketing_auth_service:
+    build: ./microservices-express/auth
+    image: rama89/ticketing_auth_service
+
+  ticketing_tickets_service:
+    build: ./microservices-express/tickets
+    image: rama89/ticketing_tickets_service
+
+  ticketing_orders_service:
+    build: ./microservices-express/orders
+    image: rama89/ticketing_orders_service
+
+  ticketing_expiration_service:
+    build: ./microservices-express/expiration
+    image: rama89/ticketing_expiration_service
+
+  ticketing_payments_service:
+    build: ./microservices-express/payments
+    image: rama89/ticketing_payments_service

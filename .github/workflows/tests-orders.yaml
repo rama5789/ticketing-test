@@ -1,0 +1,13 @@
+name: tests-orders
+
+on:
+  pull_request:
+    paths:
+      - 'microservices-express/orders/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd microservices-express/orders && yarn install && yarn test:ci
